@@ -2,8 +2,9 @@
   <!-- modal -->
   <div class="black-bg" v-if="openModal == true">
     <div class="white-bg">
-      <h4>상세페이지</h4>
-      <p>상세페이지-내용</p>
+      <img :src="importData[userClickData].image">
+      <h4>{{importData[userClickData].title}}</h4>
+      <p>{{importData[userClickData].content}}</p>
       <button @click="openModal=false">닫기</button>
     </div>
   </div>
@@ -11,35 +12,12 @@
   <div class="menu">
     <a v-for="menuCustom in Menus" :key="menuCustom">{{ menuCustom }}</a>
   </div>
-  <!-- Data -->
-<!--  <div>-->
-<!--    <img class="room-img" src="./assets/room0.jpg">-->
-<!--    <h4 @click="openModal=true">{{ Products[0] }}</h4>-->
-<!--    <p>60 만원</p>-->
-<!--    &lt;!&ndash; v-on:click="자바스크립트" === @click="자바스크립트" &ndash;&gt;-->
-<!--    <button @click="ReportCount[0] += 1">허위매물신고</button>-->
-<!--    <span>신고수: {{ ReportCount[0] }}</span>-->
-<!--  </div>-->
-<!--  <div>-->
-<!--    <img class="room-img" src="./assets/room1.jpg">-->
-<!--    <h4>{{ Products[1] }}</h4>-->
-<!--    <p>70 만원</p>-->
-<!--    <button @click="ReportCount[1] += 1">허위매물신고</button>-->
-<!--    <span>신고수: {{ ReportCount[1] }}</span>-->
-<!--  </div>-->
-<!--  <div>-->
-<!--    <img class="room-img" src="./assets/room2.jpg">-->
-<!--    <h4>{{ Products[2] }}</h4>-->
-<!--    <p>80 만원</p>-->
-<!--    <button @click="ReportCount[2] += 1">허위매물신고</button>-->
-<!--    <span>신고수: {{ ReportCount[2] }}</span>-->
-<!--  </div>-->
 
   <!-- import data -->
-  <div>
-    <img class="room-img" :src="importData[0].image">
-    <h4>{{importData[0].title}}</h4>
-    <p>{{importData[0].price}}원</p>
+  <div v-for="(dataCustom, i) in importData" :key="i">
+    <img class="room-img" :src="dataCustom.image">
+    <h4 @click="openModal=true; userClickData = i">{{dataCustom.title}}</h4>
+    <p>{{dataCustom.price}}원</p>
   </div>
 
 </template>
@@ -60,7 +38,9 @@ export default {
       ReportCount: [0, 0, 0],
       openModal: false,
       // import data 가져옴
-      importData: roomData
+      importData: roomData,
+      // 사용자가 누른 버튼 기록
+      userClickData: 0,
     }
   },
   // Function 저장소
@@ -68,7 +48,7 @@ export default {
     // function(){} 라고 생각하자.
     setReportCount() {
       this.ReportCount += 1; // 'ReportCount' is not defined(this로 해결)
-    }
+    },
   },
 }
 </script>
