@@ -1,6 +1,5 @@
 <template>
   <!-- modal -->
-  <!-- 2) 데이터에 따라 UI가 어떻게 보일지 작성 -->
   <div class="black-bg" v-if="openModal == true">
     <div class="white-bg">
       <h4>상세페이지</h4>
@@ -8,56 +7,62 @@
       <button @click="openModal=false">닫기</button>
     </div>
   </div>
-  <!-- v-for 상단 메뉴 커스텀-1 -->
+  <!-- 상단 메뉴 -->
   <div class="menu">
     <a v-for="menuCustom in Menus" :key="menuCustom">{{ menuCustom }}</a>
   </div>
-  <!-- -->
+  <!-- Data -->
+<!--  <div>-->
+<!--    <img class="room-img" src="./assets/room0.jpg">-->
+<!--    <h4 @click="openModal=true">{{ Products[0] }}</h4>-->
+<!--    <p>60 만원</p>-->
+<!--    &lt;!&ndash; v-on:click="자바스크립트" === @click="자바스크립트" &ndash;&gt;-->
+<!--    <button @click="ReportCount[0] += 1">허위매물신고</button>-->
+<!--    <span>신고수: {{ ReportCount[0] }}</span>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <img class="room-img" src="./assets/room1.jpg">-->
+<!--    <h4>{{ Products[1] }}</h4>-->
+<!--    <p>70 만원</p>-->
+<!--    <button @click="ReportCount[1] += 1">허위매물신고</button>-->
+<!--    <span>신고수: {{ ReportCount[1] }}</span>-->
+<!--  </div>-->
+<!--  <div>-->
+<!--    <img class="room-img" src="./assets/room2.jpg">-->
+<!--    <h4>{{ Products[2] }}</h4>-->
+<!--    <p>80 만원</p>-->
+<!--    <button @click="ReportCount[2] += 1">허위매물신고</button>-->
+<!--    <span>신고수: {{ ReportCount[2] }}</span>-->
+<!--  </div>-->
+
+  <!-- import data -->
   <div>
-    <img class="room-img" src="./assets/room0.jpg">
-    <h4 @click="openModal=true">{{ Products[0] }}</h4>
-    <p>60 만원</p>
-    <!-- v-on:click="자바스크립트" === @click="자바스크립트" -->
-    <button @click="ReportCount[0] += 1">허위매물신고</button>
-    <span>신고수: {{ ReportCount[0] }}</span>
+    <img class="room-img" :src="importData[0].image">
+    <h4>{{importData[0].title}}</h4>
+    <p>{{importData[0].price}}원</p>
   </div>
-  <div>
-    <img class="room-img" src="./assets/room1.jpg">
-    <h4>{{ Products[1] }}</h4>
-    <p>70 만원</p>
-    <button @click="ReportCount[1] += 1">허위매물신고</button>
-    <span>신고수: {{ ReportCount[1] }}</span>
-  </div>
-  <div>
-    <img class="room-img" src="./assets/room2.jpg">
-    <h4>{{ Products[2] }}</h4>
-    <p>80 만원</p>
-    <button @click="ReportCount[2] += 1">허위매물신고</button>
-    <span>신고수: {{ ReportCount[2] }}</span>
-  </div>
+
 </template>
 
 <script>
 
+// 데이터 받아오기 import {roomData1, roomData2}
+// export default일 경우 알아서 import 작명 맘대로
+import roomData from './assets/oneRoom'
+
 export default {
   name: 'App',
+  // 데이터 저장소
   data() {
     return {
       Products: ['삼성동', '인사동', "천호동"],
       Menus: ['Home', "Products", "About"],
-      // 신고수: 0
       ReportCount: [0, 0, 0],
-      /*동적인 UI 만들기
-          1) UI 현재 상태를 데이터 저장소에 저장
-          2) 데이터에 따라 UI가 어떻게 보일지 작성
-      */
-      // 1) 모달창이 지금 어떻게 보여야함?(열렸니? 닫혔니?(false)
       openModal: false,
+      // import data 가져옴
+      importData: roomData
     }
   },
-/* 자바스크립트에서 함수를 쓰는 이유?
-  ReportCount += 1라는 긴 단어를 축약하고 싶을 때
-*/
   // Function 저장소
   methods: {
     // function(){} 라고 생각하자.
