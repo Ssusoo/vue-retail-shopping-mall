@@ -20,6 +20,8 @@
     <p>{{dataCustom.price}}원</p>
   </div>
 
+	<Discount/>
+
 </template>
 
 <script>
@@ -27,6 +29,7 @@
 // 데이터 받아오기 import {roomData1, roomData2}
 // export default일 경우 알아서 import 작명 맘대로
 import roomData from './assets/oneRoom'
+import Discount from './components/Discount'
 
 export default {
   name: 'App',
@@ -50,6 +53,9 @@ export default {
       this.ReportCount += 1; // 'ReportCount' is not defined(this로 해결)
     },
   },
+	components: {
+		Discount,
+	}
 }
 </script>
 
@@ -92,4 +98,5 @@ div {
   border-radius: 8px; /*모서리 깍기*/
   padding: 20px;
 }
+
 </style>
