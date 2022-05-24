@@ -98,5 +98,4 @@ div {
   border-radius: 8px; /*모서리 깍기*/
   padding: 20px;
 }
-
 </style>
