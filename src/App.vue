@@ -10,6 +10,7 @@
   </div>
   <!-- 상단 메뉴 -->
   <div class="menu">
+    <!-- v-for="작명" in 3" :key="작명"-->
     <a v-for="menuCustom in Menus" :key="menuCustom">{{ menuCustom }}</a>
   </div>
 
@@ -28,7 +29,7 @@
 
 // 데이터 받아오기 import {roomData1, roomData2}
 // export default일 경우 알아서 import 작명 맘대로
-import roomData from './assets/oneRoom'
+import roomData from './jsons/oneRoom'
 import Discount from './components/Discount'
 
 export default {
