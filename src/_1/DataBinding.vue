@@ -5,8 +5,9 @@
 		-->
 		<h4 class="red" :style="styleCustom">xx 원룸</h4>
 		<!-- TODO 1-1) HTML Tag '사이'에 데이터바인딩하기 {{}} : 콧수염 -->
-		<p>{{ price1 }}</p>
+		<p>{{ price1 }}만원</p>
 	</div>
+	<!-- TODO Basic HTML Hard Coding -->
 	<div>
 		<h4>xx 원룸</h4>
 		<p>xx 원</p>
