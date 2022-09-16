@@ -16,7 +16,7 @@
 <script>
 
 export default {
-	name: 'PracticeWork',
+	name: 'DataBindingHomework',
 	// TODO 데이터 저장소
 	data() {
 		return {
