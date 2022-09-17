@@ -1,18 +1,23 @@
+<!--
+	4th, 모달창
+-->
 <template>
 	<div class="menu">
 		<a v-for="(menu, i) in menus" :key="i">{{ menu }}</a>
 	</div>
 
 	<div>
-		<img src="../assets/images/room0.jpg">
+		<img src="./assets/images/room0.jpg">
 		<h4>{{ products[0] }}</h4>
 		<p>50만원</p>
 	</div>
 	<div>
+		<img src="./assets/images/room0.jpg">
 		<h4>{{ products[1] }}</h4>
 		<p>50만원</p>
 	</div>
 	<div>
+		<img src="./assets/images/room0.jpg">
 		<h4>{{ products[2] }}</h4>
 		<p>50만원</p>
 	</div>
