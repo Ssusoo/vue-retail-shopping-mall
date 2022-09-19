@@ -7,17 +7,17 @@
 	</div>
 
 	<div>
-		<img src="./assets/images/room0.jpg">
+		<img :src="require(`@/assets/images/room0.jpg`)" class="room-img">
 		<h4>{{ products[0] }}</h4>
 		<p>50만원</p>
 	</div>
 	<div>
-		<img src="./assets/images/room0.jpg">
+		<img :src="require(`@/assets/images/room1.jpg`)" class="room-img">
 		<h4>{{ products[1] }}</h4>
 		<p>50만원</p>
 	</div>
 	<div>
-		<img src="./assets/images/room0.jpg">
+		<img :src="require(`@/assets/images/room2.jpg`)" class="room-img">
 		<h4>{{ products[2] }}</h4>
 		<p>50만원</p>
 	</div>
@@ -46,5 +46,11 @@ export default {
 .menu a {
 	color: black;
 	padding: 10px;
+}
+
+/* 이미지 경로 지정 src */
+.room-img {
+	width: 100%;
+	margin-top: 40px;
 }
 </style>
