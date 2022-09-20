@@ -28,16 +28,19 @@
 		<!-- TODO 5) 모달창 열기-->
 		<h4 @click="openModalWindow = true">{{ products[0] }}</h4>
 		<p>50만원</p>
+		<button @click="openEventHandlerCount[0]+=1">허위매물신고</button> <span>{{ openEventHandlerCount[0] }}</span>
 	</div>
 	<div>
 		<img :src="require(`@/assets/images/room1.jpg`)" class="room-img">
 		<h4>{{ products[1] }}</h4>
 		<p>50만원</p>
+		<button @click="openEventHandlerCount[1]+=1">허위매물신고</button> <span>{{ openEventHandlerCount[1] }}</span>
 	</div>
 	<div>
 		<img :src="require(`@/assets/images/room2.jpg`)" class="room-img">
 		<h4>{{ products[2] }}</h4>
 		<p>50만원</p>
+		<button @click="openEventHandlerCount[2]+=1">허위매물신고</button> <span> 신고수 : {{ openEventHandlerCount[2] }}</span>
 	</div>
 </template>
 
@@ -48,6 +51,7 @@ export default {
 		return {
 			// TODO 3) 모달창의 상태 저장하기
 			openModalWindow: false,
+			openEventHandlerCount: [0, 0, 0],
 			menus: ['Home', 'Product', 'About'],
 			products: ['신림동원룸', '구로동원룸', '역삼동원룸']
 		}
