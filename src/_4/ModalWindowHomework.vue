@@ -1,6 +1,5 @@
 <!--
-	4ht, 모달창 숙제
-		닫기 버튼 만들기
+	4th, 모달창 숙제(닫기 버튼 만들기)
 -->
 <template>
 	<div class="black-bg" v-if="openModalWindow === true">
@@ -61,10 +60,11 @@ export default {
 
 <style>
 body {
- margin: 0;
+	margin: 0px;
 }
 div {
 	box-sizing: border-box;
+	text-align: center; /* Quirks Mode 를 위한 가운데 정렬 */
 }
 .black-bg {
 	width: 100%;
@@ -74,20 +74,21 @@ div {
 	padding: 20px;
 }
 .white-bg {
-	width: 100%;
 	background-color: white;
+	width: 100%;
 	padding: 20px;
-	border-radius: 10px;
+	border-radius: 5px;
+}
+.room-img {
+	margin-top: 25px;
+	width: 100%;
 }
 
-.room-img {
-	padding-top: 25px;
-	width: 100%;
-}
 .menu {
 	background-color: burlywood;
 	padding: 15px;
 	border-radius: 5px;
+	text-align: left;
 }
 .menu a {
 	color: black;
