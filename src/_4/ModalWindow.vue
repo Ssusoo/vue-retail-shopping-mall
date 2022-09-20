@@ -77,32 +77,33 @@ body {
 }
 div {
 	box-sizing: border-box;
+	text-align: center; /* Quirks Mode 를 위한 가운데 정렬 */
 }
 .black-bg {
-	width: 100%; height: 100%;
-	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
 	position: fixed;
 	padding: 20px;
 }
 .white-bg {
+	background-color: white;
 	width: 100%;
-	background: white;
-	border-radius: 8px;
 	padding: 20px;
+	border-radius: 5px;
 }
-
-/* 이미지 경로 지정 src */
+/* src room 이미지 지정*/
 .room-img {
+	margin-top: 25px;
 	width: 100%;
-	margin-top: 40px;
 }
 
 .menu {
-	background: burlywood;
+	background-color: burlywood;
 	padding: 15px;
 	border-radius: 5px;
+	text-align: left;
 }
-
 .menu a {
 	color: black;
 	padding: 10px;
