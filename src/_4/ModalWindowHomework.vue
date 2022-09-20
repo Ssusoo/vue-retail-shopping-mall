@@ -31,7 +31,7 @@
 		<img :src="require('@/assets/images/room2.jpg')" class="room-img">
 		<h4 @click="openModalWindow = true">{{ products[2] }}</h4>
 		<p>50만원</p>
-		<button @click="eventHandlerCount[2 ]+= 1">허위매물신고</button> <span>신고수 : {{ eventHandlerCount[2] }}</span>
+		<button @click="eventHandlerCount[2]+= 1">허위매물신고</button> <span>신고수 : {{ eventHandlerCount[2] }}</span>
 	</div>
 
 <!--	<div v-for="(product, i) in products" :key="i">-->
