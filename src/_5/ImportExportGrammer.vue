@@ -5,6 +5,9 @@
 		2) import oneRoom.js 데이터 export 하기
 		3) 데이터 저장소에 data 변수 선언하기
 		4) 템플릿에 데이터바인딩하기
+		5) HTML 태그 안의 속성 데이터 바인딩하기
+
+		* TODO HTML 태그안의 속성 데이터바인딩할 때 :(콜론)을 넣으면 된다.
 -->
 <template>
 	<div class="black-bg" v-if="openModalWindow === true">
@@ -19,7 +22,9 @@
 		<a v-for="(menu,i) in menus" :key="i">{{ menu }}</a>
 	</div>
 	<div>
-		<img :src="require('@/assets/images/room0.jpg')" class="room-img">
+		<!-- TODO 5) HTML 태그 안의 속성 데이터 바인딩하기 -->
+		<img :src="rooms[0].image" class="room-img">
+
 		<!-- TODO 4) 템플릿에 데이터바인딩하기 -->
 		<h4 @click="openModalWindow=true">{{ rooms[0].title}}</h4>
 		<p>{{ rooms[0].price }}원</p>
@@ -40,8 +45,8 @@
 </template>
 
 <script>
-// 2) import oneRoom.js 데이터 export 하기
-import data from '/src/jsons/oneRoom'
+// TODO 2) import oneRoom.js 데이터 export 하기
+import data from '@/assets/jsons/oneRoom.js'
 
 export default {
 	name: 'ImportExportGrammer',
