@@ -1,5 +1,10 @@
 <!--
 	5th, import export 문법
+
+		1) Jsons/oneRoom.js 데이터 설정하기
+		2) import oneRoom.js 데이터 export 하기
+		3) 데이터 저장소에 data 변수 선언하기
+		4) 템플릿에 데이터바인딩하기
 -->
 <template>
 	<div class="black-bg" v-if="openModalWindow === true">
@@ -15,8 +20,9 @@
 	</div>
 	<div>
 		<img :src="require('@/assets/images/room0.jpg')" class="room-img">
-		<h4 @click="openModalWindow=true">{{ products[0]}}</h4>
-		<p>50만원</p>
+		<!-- TODO 4) 템플릿에 데이터바인딩하기 -->
+		<h4 @click="openModalWindow=true">{{ rooms[0].title}}</h4>
+		<p>{{ rooms[0].price }}원</p>
 		<button @click="eventHandlerCount[0]+=1">허위매물신고</button> <span>신고수 : {{ eventHandlerCount[0] }}</span>
 	</div>
 	<div>
@@ -34,10 +40,15 @@
 </template>
 
 <script>
+// 2) import oneRoom.js 데이터 export 하기
+import data from '/src/jsons/oneRoom'
+
 export default {
 	name: 'ImportExportGrammer',
 	data() {
 		return {
+			// TODO 3) 데이터 저장소에 data 변수 선언하기
+			rooms: data,
 			openModalWindow: false,
 			eventHandlerCount: [0, 0, 0,],
 			products: ['인사동원룸', '신림동원룸', '구로동원룸'],

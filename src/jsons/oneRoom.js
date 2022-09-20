@@ -1,3 +1,4 @@
+// TODO 1) Jsons/oneRoom.js 데이터 설정하기
 // 보낼 파일에서 export 해줘야 데이터를 import할 수 있다.
 // export {roomData1, roomData2}
 // export default roomData
