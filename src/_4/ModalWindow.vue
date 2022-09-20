@@ -56,6 +56,11 @@ export default {
 			products: ['신림동원룸', '구로동원룸', '역삼동원룸']
 		}
 	},
+	methods: {
+		increase() {
+			this.openEventHandlerCount++;
+		}
+	}
 }
 </script>
 
