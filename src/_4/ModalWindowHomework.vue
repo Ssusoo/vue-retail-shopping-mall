@@ -53,7 +53,7 @@ export default {
 	},
 	methods: {
 		increase() {
-			this.eventHandlerCount +=1 ;
+			this.eventHandlerCount +=1;
 		}
 	}
 }
