@@ -19,16 +19,19 @@
 		<img :src="require('@/assets/images/room0.jpg')" class="room-img">
 		<h4 @click="openModalWindow = true">{{ products[0] }}</h4>
 		<p>50만원</p>
+		<button @click="eventHandlerCount[0] += 1">허위매물신고</button> <span>신고수 : {{ eventHandlerCount[0] }}</span>
 	</div>
 	<div>
 		<img :src="require('@/assets/images/room1.jpg')" class="room-img">
 		<h4 @click="openModalWindow = true">{{ products[1] }}</h4>
 		<p>50만원</p>
+		<button @click="eventHandlerCount[1] += 1">허위매물신고</button> <span>신고수 : {{ eventHandlerCount[1] }}</span>
 	</div>
 	<div>
 		<img :src="require('@/assets/images/room2.jpg')" class="room-img">
 		<h4 @click="openModalWindow = true">{{ products[2] }}</h4>
 		<p>50만원</p>
+		<button @click="eventHandlerCount[2 ]+= 1">허위매물신고</button> <span>신고수 : {{ eventHandlerCount[2] }}</span>
 	</div>
 
 <!--	<div v-for="(product, i) in products" :key="i">-->
@@ -42,9 +45,15 @@ export default {
 	name: 'ModalWindowHomework',
 	data() {
 		return {
+			eventHandlerCount: [0, 0, 0],
 			openModalWindow: false,
 			products: ['인사동원룸', '신림동원룸', '구로동원룸'],
 			menus: ['Home', 'Product', 'About']
+		}
+	},
+	methods: {
+		increase() {
+			this.eventHandlerCount +=1 ;
 		}
 	}
 }
