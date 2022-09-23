@@ -1,3 +1,6 @@
+<!--
+	8th, 프록스(props) 문법 숙제
+-->
 <template>
 	<div class="black-bg" v-if="openModalWindow === true">
 		<div class="white-bg">
@@ -13,7 +16,7 @@
 
 <script>
 export default {
-	name: 'PropsGrammerChildrenHomework',
+	name: 'PropsGrammarChildrenHomework',
 	// TODO 2) 자식 컴포넌트에서 props 데이터 등록하기
 	props: {
 		// 데이터이름: 자료형 이름(Number, String, Array, Object ... etc)

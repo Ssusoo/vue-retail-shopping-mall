@@ -1,3 +1,6 @@
+<!--
+	8th, 프록스(props) 문법 숙제
+-->
 <template>
 	<div class="menu">
 		<a v-for="(menu, i) in menus" :key="i">{{ menu }}</a>
@@ -18,12 +21,12 @@
 </template>
 
 <script>
-import PropsGrammerDiscountComponentHomework from '@/_8/PropsGrammerDiscountComponentHomework'
+import PropsGrammerDiscountComponentHomework from '@/_8/PropsGrammarDiscountComponentHomework'
 import data from '@/assets/jsons/oneRoom'
-import PropsGrammerChildrenHomework from '@/_8/PropsGrammerChildrenHomework'
+import PropsGrammerChildrenHomework from '@/_8/PropsGrammarChildrenHomework'
 
 export default {
-	name: 'PropsGrammerParentsHomework',
+	name: 'PropsGrammarParentsHomework',
 	components: {
 		PropsGrammerDiscountComponentHomework,
 		PropsGrammerChildrenHomework,
