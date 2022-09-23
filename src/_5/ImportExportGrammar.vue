@@ -49,7 +49,7 @@
 import data from '@/assets/jsons/oneRoom.js'
 
 export default {
-	name: 'ImportExportGrammer',
+	name: 'ImportExportGrammar',
 	data() {
 		return {
 			// TODO 3) 데이터 저장소에 data 변수 선언하기

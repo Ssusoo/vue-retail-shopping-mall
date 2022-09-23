@@ -7,8 +7,8 @@
 		<img :src="room.image" class="room-img">
 		<h4 @click="openModalWindow = true; userClickEvent = [i]">{{ room.title }}</h4>
 		<p>{{ room.price }}원</p>
-		<PropsGrammerDiscountComponentHomework />
 	</div>
+	<PropsGrammerDiscountComponentHomework />
 
 	<PropsGrammerChildrenHomework
 		:rooms="rooms"
@@ -19,7 +19,7 @@
 
 <script>
 import PropsGrammerDiscountComponentHomework from '@/_8/PropsGrammerDiscountComponentHomework'
-import Data from '@/assets/jsons/oneRoom'
+import data from '@/assets/jsons/oneRoom'
 import PropsGrammerChildrenHomework from '@/_8/PropsGrammerChildrenHomework'
 
 export default {
@@ -32,7 +32,7 @@ export default {
 		return {
 			userClickEvent: 0,
 			openModalWindow: false,
-			rooms: Data,
+			rooms: data,
 			menus: ['Home', 'Product', 'About'],
 		}
 	},
