@@ -47,7 +47,7 @@ import DiscountBanner from "@/components/DiscountBanner";
 import ModalWindow from "@/components/ModalWindow";
 
 export default {
-	name: 'PropsGrammer',
+	name: 'PropsGrammar',
 	components: {
 		// TODO 2) Components: {} 안에 등록하기
 		ModalWindow,
