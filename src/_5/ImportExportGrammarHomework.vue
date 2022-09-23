@@ -30,7 +30,7 @@
 <script>
 import data from '@/assets/jsons/oneRoom.js'
 export default {
-	name: 'ImportExportGrammerHomework',
+	name: 'ImportExportGrammarHomework',
 	data() {
 		return {
 			detailModalWindow: false,
