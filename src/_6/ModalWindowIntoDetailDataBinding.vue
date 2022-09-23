@@ -25,7 +25,7 @@
 		<!-- TODO 3) UI 조작하는 버튼 만들기(사용자가 누른 상품번호)
 					* TODO @click에 1개이상 넣을 때 세미콜론 넣기 @click="1; 2"
 		-->
-		<h4 @click="openModalWindow = true; userClickEvent = i">{{ room.title }}</h4>
+		<h4 @click="openModalWindow = true; userClickEvent = [i]">{{ room.title }}</h4>
 		<p>{{ room.price }}원</p>
 	</div>
 </template>
