@@ -7,7 +7,7 @@
 		3) 팝업창 만들기
 		4) 클릭이벤트(신고수)
 		5) 팝업창 디테일(클릭했을 때)
-		6) 컴포넌트1
+		6) 컴포넌트1(할인팝업)
 		7) 컴포넌트2
 -->
 <template>
@@ -18,6 +18,7 @@
 			<h4>상품번호 : {{ rooms[userClickEvent].id }}번</h4>
 			<p>{{ rooms[userClickEvent].title }}</p>
 			<p>{{ rooms[userClickEvent].content }}</p>
+			<PropsGrammarDiscountComponentHomework />
 			<button @click="openModalWindow = false">닫기</button>
 		</div>
 	</div>
@@ -39,11 +40,12 @@
 <script>
 // 2) Json 데이터 데이터바인딩하기
 import Data from '@/assets/jsons/oneRoom'
+import PropsGrammarDiscountComponentHomework from '@/_8/PropsGrammarDiscountComponentHomework'
 
 export default {
-	name: 'PropsGrammarParentsHomeworks',
+	name: 'PropsGrammarParentsHomework',
 	components: {
-
+		PropsGrammarDiscountComponentHomework,
 	},
 	data() {
 		return {
@@ -85,7 +87,12 @@ div {
 	padding: 20px;
 	border-radius: 5px;
 }
-
+.discount {
+	background-color: darkgreen;
+	padding: 20px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
 .menu {
 	background-color: sandybrown;
 	padding: 20px;
