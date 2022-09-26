@@ -7,21 +7,16 @@
 		3) 팝업창 만들기
 		4) 클릭이벤트(신고수)
 		5) 팝업창 디테일(클릭했을 때)
-		6) 컴포넌트1(할인팝업)
-		7) 컴포넌트2
+		TODO 6) 컴포넌트1(할인팝업)
+		TODO 7) 컴포넌트2(3) 팝업창 만들기)
 -->
 <template>
-	<!-- 3) 팝업창 만들기 -->
-	<div class="black-bg" v-if="openModalWindow === true">
-		<div class="white-bg">
-			<!-- 5) 팝업창 디테일(클릭했을 때) -->
-			<h4>상품번호 : {{ rooms[userClickEvent].id }}번</h4>
-			<p>{{ rooms[userClickEvent].title }}</p>
-			<p>{{ rooms[userClickEvent].content }}</p>
-			<PropsGrammarDiscountComponentHomework />
-			<button @click="openModalWindow = false">닫기</button>
-		</div>
-	</div>
+	<!-- TODO 7) 컴포넌트2(3) 팝업창 만들기) -->
+	<PropsGrammarChildrenHomework
+		:openModalWindow="openModalWindow"
+		:rooms="rooms"
+		:userClickEvent="userClickEvent"
+	/>
 	<!-- 1) 메뉴 만들기(v-for) -->
 	<div class="menu">
 		<a v-for="(menu, i) in menus" :key="i">{{ menu }}</a>
@@ -40,12 +35,12 @@
 <script>
 // 2) Json 데이터 데이터바인딩하기
 import Data from '@/assets/jsons/oneRoom'
-import PropsGrammarDiscountComponentHomework from '@/_8/PropsGrammarDiscountComponentHomework'
+import PropsGrammarChildrenHomework from '@/_8/PropsGrammarChildrenHomework'
 
 export default {
 	name: 'PropsGrammarParentsHomework',
 	components: {
-		PropsGrammarDiscountComponentHomework,
+		PropsGrammarChildrenHomework,
 	},
 	data() {
 		return {
