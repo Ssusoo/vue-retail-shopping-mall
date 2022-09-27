@@ -1,17 +1,17 @@
 <!--
-	8th, 프록스(props) 문법 숙제 Part1
+	8th, 프록스(props) 문법 숙제 Part1(할인 팝업창과 모달창을 컴포넌트로 바꾸기)
 
 	복습 메뉴얼
 		1) 메뉴 만들기(v-for)
 		2) Json 데이터 데이터바인딩하기
-		3) 팝업창 만들기
+		3) 모달창 만들기
 		4) 클릭이벤트(신고수)
-		5) 팝업창 디테일(클릭했을 때)
+		5) 모달창 디테일(클릭했을 때)
 		TODO 6) 컴포넌트1(할인팝업)
-		TODO 7) 컴포넌트2(3) 팝업창 만들기)
+		TODO 7) 컴포넌트2(3) 모달창 만들기)
 -->
 <template>
-	<!-- TODO 7) 컴포넌트2(3) 팝업창 만들기) -->
+	<!-- TODO 7) 컴포넌트2(3) 모달창 만들기) -->
 	<PropsGrammarChildrenHomework
 		:openModalWindow="openModalWindow"
 		:rooms="rooms"
@@ -44,11 +44,11 @@ export default {
 	},
 	data() {
 		return {
-			// 5) 팝업창 디테일(클릭했을 때)
+			// 5) 모달창 디테일(클릭했을 때)
 			userClickEvent: 0,
 			// 4) 클릭이벤트(신고수)
 			eventHandlerCount: [0,0,0,0,0,0,0,0,0],
-			// 3) 팝업창 만들기
+			// 3) 모달창 만들기
 			openModalWindow: 0,
 			menus: ['Home', 'Product', 'About'],
 			rooms: Data,
