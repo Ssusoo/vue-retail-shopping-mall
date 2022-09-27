@@ -38,7 +38,7 @@
 <script>
 import Data from '@/assets/jsons/oneRoom'
 // TODO 2) 부모 컴포넌트에서 자식 컴포넌트 import하기
-import PropsGrammarDataBindingComponentHomeworkPartTwo from '@/_8/PropsGrammarDataBindingComponentHomeworkPartTwo'
+import PropsGrammarDataBindingComponentHomeworkPartTwo from '@/_8/homework/parttwo/PropsGrammarDataBindingComponentHomeworkPartTwo'
 
 export default {
 	name: 'PropsGrammarDataBindingHomeworkPartTwo',
