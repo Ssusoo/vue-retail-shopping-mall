@@ -22,13 +22,16 @@
 			7) 컴포넌트2(3) 모달창 만들기)
 			8) 컴포넌트3(2) Json 데이터 데이터바인딩하기)
 		]
-		TODO 10) 커스텀이벤트(모달창 닫기 버튼 처리하기)
+		TODO 10) 부모 컴포넌트, 커스텀이벤트(모달창 닫기 버튼 처리하기)
+		TODO 11) 자식 컴포넌트, 커스텀이벤트(모달창 닫기 버튼 처리하기)
 -->
 
 <template>
 	<div class="menu">
 		<a v-for="menu in menus" :key="menu">{{ menu }}</a>
 	</div>
+
+	<!-- TODO 10) 커스텀이벤트(모달창 닫기 버튼 처리하기) -->
 	<CustomEventGrammarModalWindowComponentHomework
 		:open-modal-window="openModalWindow"
 		:room="rooms"
