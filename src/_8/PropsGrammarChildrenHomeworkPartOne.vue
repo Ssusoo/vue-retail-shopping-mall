@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import PropsGrammarDiscountComponentHomework from '@/_8/PropsGrammarDiscountComponentHomework'
+import PropsGrammarDiscountComponentHomework from '@/_8/PropsGrammarDiscountComponentHomeworkPartOne'
 
 export default {
 	name: 'PropsGrammarChildrenHomework',

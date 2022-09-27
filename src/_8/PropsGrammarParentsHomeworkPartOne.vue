@@ -35,7 +35,7 @@
 <script>
 // 2) Json 데이터 데이터바인딩하기
 import Data from '@/assets/jsons/oneRoom'
-import PropsGrammarChildrenHomework from '@/_8/PropsGrammarChildrenHomework'
+import PropsGrammarChildrenHomework from '@/_8/PropsGrammarChildrenHomeworkPartOne'
 
 export default {
 	name: 'PropsGrammarDataBindingHomeworkPartTwo',
