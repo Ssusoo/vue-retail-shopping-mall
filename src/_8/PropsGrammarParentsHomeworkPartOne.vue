@@ -38,7 +38,7 @@ import Data from '@/assets/jsons/oneRoom'
 import PropsGrammarChildrenHomework from '@/_8/PropsGrammarChildrenHomework'
 
 export default {
-	name: 'PropsGrammarParentsHomeworkPartOne',
+	name: 'PropsGrammarDataBindingHomeworkPartTwo',
 	components: {
 		PropsGrammarChildrenHomework,
 	},
