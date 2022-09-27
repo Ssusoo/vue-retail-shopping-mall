@@ -1,5 +1,5 @@
 <!--
-	8th, 프록스(props) 문법 숙제
+	8th, 프록스(props) 문법 숙제 Part1
 
 	복습 메뉴얼
 		1) 메뉴 만들기(v-for)
@@ -38,7 +38,7 @@ import Data from '@/assets/jsons/oneRoom'
 import PropsGrammarChildrenHomework from '@/_8/PropsGrammarChildrenHomework'
 
 export default {
-	name: 'PropsGrammarParentsHomework',
+	name: 'PropsGrammarParentsHomeworkPartOne',
 	components: {
 		PropsGrammarChildrenHomework,
 	},
