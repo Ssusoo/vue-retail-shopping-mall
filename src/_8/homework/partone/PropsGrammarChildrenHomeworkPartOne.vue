@@ -1,5 +1,5 @@
 <!--
-	8th, 프록스(props) 문법 숙제
+	8th, 프록스(props) 문법 숙제 Part1(할인 팝업창과 모달창을 컴포넌트로 바꾸기)
 -->
 <template>
 	<!-- 3) 팝업창 만들기 -->
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import PropsGrammarDiscountComponentHomework from '@/_8/PropsGrammarDiscountComponentHomeworkPartOne'
+import PropsGrammarDiscountComponentHomework from '@/_8/homework/partone/PropsGrammarDiscountComponentHomeworkPartOne'
 
 export default {
 	name: 'PropsGrammarChildrenHomework',
