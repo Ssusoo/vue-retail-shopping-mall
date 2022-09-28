@@ -21,7 +21,7 @@
 		숫자를 입력했는지 문자를 입력했는지 감시하고 싶으면
 		2) <input> : min max or range
 			input을 제한줄 수 있다.
-		3) input 제약사항들
+		*** input 제약사항들
 			이메일 형식이 맞는지, 패스워드가 맞는지
 			이런식의 경우보다 vue form Validation 라이브러리를 받는 게 좋다.
 -->
