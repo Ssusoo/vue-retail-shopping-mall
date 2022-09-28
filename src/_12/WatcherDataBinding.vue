@@ -7,6 +7,11 @@
 
 	TODO 1) 스크립트에 watch: { 감시할 데이터(){} } 만들기
 		숫자를 입력했는지 문자를 입력했는지 감시하고 싶으면
+		2) <input> : min max or range
+			input을 제한줄 수 있다.
+		3) input 제약사항들
+			이메일 형식이 맞는지, 패스워드가 맞는지
+			이런식의 경우보다 vue form Validation 라이브러리를 받는 게 좋다.
 -->
 <template>
 	<div class="menu">
@@ -18,6 +23,9 @@
 		<p>{{ room.content }}</p>
 		<input v-model="month">
 		<p>입력한 {{ month }} : {{ room.price * month }}원</p>
+		<!-- TODO 2) <input> : min max or range -->
+		<input type="range" min="1" max="10">
+		<input type="radio">
 	</div>
 </template>
 
