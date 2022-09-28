@@ -19,25 +19,59 @@
 			]
 -->
 <template>
-	<div>
-
+	<div class="menu">
+		<a v-for="menu in menus" :key="menu">{{ menu }}</a>
 	</div>
+	<MainDataBindingComponent
+		:room="rooms[i]"
+		v-for="(room, i) in rooms"
+		:key="room"
+	/>
 </template>
 
 <script>
+import Data from '@/assets/jsons/oneRoom'
+import MainDataBindingComponent from '@/_0/components/MainDataBindingComponent'
+
 export default {
 	name: 'MainPractice',
 	components: {
-
+		MainDataBindingComponent,
 	},
 	data() {
 		return {
-
+			rooms: Data,
+			menus: ['Home', 'Product', 'About']
 		}
 	},
 }
 </script>
 
 <style>
-
+body {
+	margin: 0px;
+}
+div {
+	box-sizing: border-box;
+	text-align: center;
+}
+.black-bg {
+	background-color: rgba(0,0,0,0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+.room-img {
+	width: 100%;
+	height: 100%;
+	margin-bottom: 10px;
+}
+.menu {
+	text-align: left;
+	background-color: sandybrown;
+	padding: 20px;
+}
+.menu a {
+	padding: 15px;
+}
 </style>
