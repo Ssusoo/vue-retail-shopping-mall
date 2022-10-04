@@ -42,9 +42,9 @@
 
 <script>
 import Data from '@/assets/jsons/oneRoom'
-import DiscountBanner from "@/components/DiscountBanner";
+import DiscountBanner from "@/_8/components/DiscountBanner";
 // TODO 1) ModalWindow.vue import하기
-import ModalWindow from "@/components/ModalWindow";
+import ModalWindow from "@/_8/components/ModalWindow";
 
 export default {
 	name: 'PropsGrammar',

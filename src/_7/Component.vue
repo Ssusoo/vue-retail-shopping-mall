@@ -55,7 +55,7 @@
 <script>
 import Data from '@/assets/jsons/oneRoom'
 // TODO 5-1) Discount.vue import하기
-import DiscountBanner from "@/components/DiscountBanner";
+import DiscountBanner from "@/_8/components/DiscountBanner";
 
 export default {
 	name: 'Component',
